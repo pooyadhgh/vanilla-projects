@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #242333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.movie-container {
+  margin: 1.5rem 0;
+}
+
+.movie-container select {
+  margin: 1rem 0;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+.movie-container label {
+  display: block;
+  font-size: 1rem;
+}
+
+.showcase {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+  margin: 2rem 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  color: #777;
+  list-style: none;
+  justify-content: space-between;
+}
+
+.showcase li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.5rem;
+}
+
+.showcase li small {
+  margin-left: 0.25rem;
+}
+
+.container {
+  perspective: 1000px;
+  margin: 2rem 0;
+}
+
+.screen {
+  background-color: #fff;
+  height: 5rem;
+  width: 100%;
+  margin: 1rem 0;
+  transform: rotateX(-45deg);
+  box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+.rows {
+  display: flex;
+}
+
+.seat {
+  background-color: #444451;
+  height: 1rem;
+  width: 1.25rem;
+  margin: 0.25rem;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.seat.selected {
+  background-color: #6feaf6;
+}
+
+.seat.occupied {
+  background-color: #fff;
+  cursor: not-allowed;
+}
+
+.seat:nth-of-type(2) {
+  margin-right: 1rem;
+}
+
+.seat:nth-last-of-type(2) {
+  margin-left: 1rem;
+}
+
+.seat:not(.occupied):hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
+}
+
+.showcase .seat:not(.occupied):hover {
+  cursor: default;
+  transform: scale(1);
+}
+
+p.text {
+  margin: 0.5rem 0;
+}
+
+p.text span {
+  color: #6feaf6;
+}
