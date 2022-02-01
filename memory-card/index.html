@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="script.js" defer></script>
+    <title>Memory Cards</title>
+  </head>
+  <body>
+    <button class="btn clear" id="clear">
+      <i class="fas fa-trash"> Clear Cards</i>
+    </button>
+
+    <h1>
+      Memory Cards
+
+      <button id="show" class="btn btn-small">
+        <i class="fas fa-plus"> Add new card</i>
+      </button>
+    </h1>
+
+    <div class="cards" id="cards-container">
+      <!-- <div class="card active">
+        <div class="inner-card">
+          <div class="inner-card-front">
+            <p>question?</p>
+          </div>
+          <div class="inner-card-back">
+            <p>answer</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="inner-card">
+          <div class="inner-card-front">
+            <p>question?</p>
+          </div>
+          <div class="inner-card-back">
+            <p>answer</p>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="navigation">
+      <button id="prev" class="btn btn-small nav-button">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+
+      <p id="current"></p>
+
+      <button id="next" class="btn btn-small nav-button">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+
+    <div id="add-container" class="add-container">
+      <h2>
+        Add new card
+
+        <button id="hide" class="btn btn-small btn-ghost">
+          <i class="fas fa-times"></i>
+        </button>
+      </h2>
+
+      <div class="form-group">
+        <label for="question">Question</label>
+        <textarea
+          name="question"
+          id="question"
+          placeholder="Enter your question..."
+        ></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="answer">Answer</label>
+        <textarea
+          name="answer"
+          id="answer"
+          placeholder="Enter your answer..."
+        ></textarea>
+      </div>
+      <button class="btn" id="add-card">
+        <i class="fas fa-plus"> Add card</i>
+      </button>
+    </div>
+  </body>
+</html>
